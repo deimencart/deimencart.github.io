@@ -9,7 +9,7 @@
 		<title>Diego Méndez Carter | Robotics & AI Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Personal portfolio and academic reproductions in robotic manipulation, GPU physics simulation (Genesis World), computer vision, and autonomous field robotics (ROS 2)." />
+		<meta name="description" content="Personal portfolio and research in robotic manipulation, GPU physics simulation (Genesis World), computer vision, and autonomous field robotics (ROS 2)." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -24,11 +24,10 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Featured Implementations</a></li>
-						<li><a href="#three">Experience & Industry</a></li>
-						<li><a href="#four">Education</a></li>
-						<li><a href="#five">Technical Skills</a></li>
-						<li><a href="#six">Curriculum Vitae</a></li>
+						<li><a href="#two">Paper Reproductions</a></li>
+						<li><a href="#three">Robot Workshops</a></li>
+						<li><a href="#four">Experience & Industry</a></li>
+						<li><a href="#five">Education</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -56,59 +55,35 @@
 										<h2>Diego Méndez Carter</h2>
 										<p>M.Eng. in Robotics, Graphics and Computer Vision · Mechatronics Engineer</p>
 									</header>
-									<p>I am a Master's student in Robotics, Graphics, and Computer Vision at <strong>Universidad de Zaragoza (UNIZAR, Spain)</strong> and a Mechatronics Engineer from the <strong>National Autonomous University of Mexico (UNAM)</strong>. My work focuses on <strong>robotic manipulation of deformable objects (DOM)</strong>, <strong>GPU physics simulation (Genesis World)</strong>, and <strong>deep reinforcement learning</strong>.</p>
-
-									<p>My background bridges physical engineering with advanced robotic software. I spent 2.5 years as a <strong>Sourcing Engineer at Chamberlain Group</strong> conducting electromechanical failure analysis, component testing across actuators and motors, and crisis resolution. Previously, I designed and fabricated an autonomous beach-cleaning rover for my undergraduate honors thesis at UNAM and developed mobile competition platforms at the CROFI Robotics Club.</p>
-
-									<p>Currently for my Master's research at UNIZAR, I develop autonomous manipulation and folding pipelines for flexible textiles using Franka Emika Panda and UR10e manipulators in the <strong>Genesis World</strong> physics engine (XPBD / PBD on GPU), combining analytical nominal trajectories with continuous residual Soft Actor-Critic (SAC) reinforcement learning.</p>
+									<p>I am a Master's student in Robotics, Graphics, and Computer Vision at <strong>Universidad de Zaragoza (UNIZAR, Spain)</strong> and a Mechatronics Engineer from <strong>UNAM (Mexico)</strong>. My current research focuses on <strong>deformable object manipulation (DOM)</strong> using GPU-accelerated physics simulation (<strong>Genesis World</strong>) and continuous residual reinforcement learning. Previously, I spent 2.5 years as a <strong>Sourcing Engineer at Chamberlain Group</strong> conducting failure analysis and electromechanical testing on actuators and motors. With a strong hands-on background in mobile robotics and competition platforms from UNAM's CROFI club, I develop autonomous systems bridging physical hardware and simulation.</p>
 								</div>
 							</section>
 
-						<!-- Section Two: Featured Implementations / Projects -->
+						<!-- Section Two: Paper Reproductions -->
 							<section id="two">
 								<div class="container">
-									<h3>Featured Implementations & Repositories</h3>
-									<p>Independent academic reproductions and research pipelines complete with simulation benchmarks, evaluation videos, and hardware setups.</p>
+									<h3>Paper Reproductions</h3>
+									<p>Academic reproductions, algorithmic implementations, and experimental evaluations from robotics and computer vision literature.</p>
 									<div class="features">
 
-										<!-- SAC Curriculum Cloth Folding -->
+										<!-- SAC Curriculum Cloth Folding (Thesis / Current Work) -->
 										<article>
 											<a href="https://github.com/deimencart/SAC-Curriculum-Repro" target="_blank" class="image">
 												<img src="images/sac_stage2.gif" alt="SAC Cloth Folding Rollout" />
 											</a>
 											<div class="inner">
+												<span class="badge-active"><i class="icon solid fa-circle"></i>Active · Current Work</span>
 												<h4>Soft Actor-Critic (SAC) & Curriculum Learning for Cloth Folding</h4>
-												<p>Continuous residual reinforcement learning in <strong>Genesis World</strong> GPU physics (XPBD). Combines analytical $C^2$ quintic-timed Bézier trajectories with learned high-frequency Cartesian offsets to eliminate wrinkles and ensure hem alignment in garment folding.</p>
+												<p><strong>Master's Thesis Research.</strong> Continuous residual reinforcement learning in <strong>Genesis World</strong> GPU physics (XPBD). Combines analytical $C^2$ quintic-timed Bézier trajectories with learned high-frequency Cartesian offsets to eliminate wrinkles and ensure hem alignment in garment manipulation with UR10e and Franka Emika Panda arms.</p>
 												<div style="margin-bottom: 0.8em;">
 													<span class="badge-tag">Genesis World XPBD</span>
 													<span class="badge-tag">PyTorch SAC</span>
-													<span class="badge-tag">UR10e Manipulator</span>
-													<span class="badge-tag">Gymnasium</span>
+													<span class="badge-tag">UR10e / Franka</span>
+													<span class="badge-tag">Curriculum Learning</span>
 												</div>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/SAC-Curriculum-Repro" target="_blank" class="button small">GitHub Repo</a></li>
 													<li><a href="https://github.com/deimencart/SAC-Curriculum-Repro#video-evaluations--policy-rollouts" target="_blank" class="button alt small">Video Rollouts</a></li>
-												</ul>
-											</div>
-										</article>
-
-										<!-- UGV Voyager 3 -->
-										<article>
-											<a href="https://github.com/deimencart/Voyager" target="_blank" class="image">
-												<img src="images/voyager_architecture.png" alt="Voyager 3 Architecture" />
-											</a>
-											<div class="inner">
-												<h4>UGV Voyager 3 — Autonomous Field Rover Platform</h4>
-												<p>Field-ready Unmanned Ground Vehicle with Ackermann kinematics (EU H2020 RAWFIE platform). Integrates The Cube Black (Pixhawk 2.1) running ArduRover, a Raspberry Pi 3B companion gateway, a 360° LightWare SF40/C LiDAR, and native ROS 2 Humble integration for laser mapping.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">ROS 2 Humble</span>
-													<span class="badge-tag">ArduRover / Pixhawk</span>
-													<span class="badge-tag">LiDAR SF40/C</span>
-													<span class="badge-tag">Ackermann UGV</span>
-												</div>
-												<ul class="actions small">
-													<li><a href="https://github.com/deimencart/Voyager" target="_blank" class="button small">GitHub Repo</a></li>
-													<li><a href="https://github.com/deimencart/Voyager#system-overview" target="_blank" class="button alt small">System Specs</a></li>
 												</ul>
 											</div>
 										</article>
@@ -122,33 +97,13 @@
 												<h4>CLASP-Repro — Semantic Keypoint Detection & Garment Grasping</h4>
 												<p>Reproduction of the CLASP semantic keypoint detection pipeline. Features a ResNet-50 backbone with spatial deconvolution heads predicting heatmap landmarks (waistbands, hems, crotch) to infer robust SE(3) grasp poses for textile manipulation.</p>
 												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">ResNet-50</span>
+													<span class="badge-tag">ResNet-50 Heatmaps</span>
 													<span class="badge-tag">Spatial Heatmaps</span>
 													<span class="badge-tag">PyTorch</span>
 													<span class="badge-tag">Grasp Planning</span>
 												</div>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/CLASP-Repro" target="_blank" class="button small">GitHub Repo</a></li>
-												</ul>
-											</div>
-										</article>
-
-										<!-- Structure from Motion -->
-										<article>
-											<a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="image">
-												<img src="images/sfm_superglue_matches.png" alt="SuperGlue Epipolar Matches" />
-											</a>
-											<div class="inner">
-												<h4>SFM-Seminar-Project — Structure from Motion & Camera Localization</h4>
-												<p>Structure from Motion pipeline for historical camera localization within modern 3D reconstructions. Implements feature matching with SuperGlue, 8-point RANSAC epipolar filtering, Essential matrix decomposition, and linear triangulation.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">SuperGlue / SuperPoint</span>
-													<span class="badge-tag">Epipolar Geometry</span>
-													<span class="badge-tag">Triangulation</span>
-													<span class="badge-tag">OpenCV</span>
-												</div>
-												<ul class="actions small">
-													<li><a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
 											</div>
 										</article>
@@ -173,12 +128,104 @@
 											</div>
 										</article>
 
+										<!-- Structure from Motion -->
+										<article>
+											<a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="image">
+												<img src="images/sfm_superglue_matches.png" alt="SuperGlue Epipolar Matches" />
+											</a>
+											<div class="inner">
+												<h4>SFM-Seminar-Project — Structure from Motion & Camera Localization</h4>
+												<p>Structure from Motion pipeline for historical camera localization within modern 3D reconstructions. Implements feature matching with SuperGlue, 8-point RANSAC epipolar filtering, Essential matrix decomposition, and linear triangulation.</p>
+												<div style="margin-bottom: 0.8em;">
+													<span class="badge-tag">SuperGlue / SuperPoint</span>
+													<span class="badge-tag">Epipolar Geometry</span>
+													<span class="badge-tag">Triangulation</span>
+													<span class="badge-tag">OpenCV</span>
+												</div>
+												<ul class="actions small">
+													<li><a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="button small">GitHub Repo</a></li>
+												</ul>
+											</div>
+										</article>
+
 									</div>
 								</div>
 							</section>
 
-						<!-- Section Three: Experience -->
+						<!-- Section Three: Robot Workshops -->
 							<section id="three">
+								<div class="container">
+									<h3>Robot Workshops</h3>
+									<p>Hardware platforms, field rovers, competition vehicles, and autonomous prototypes built across academic and research workshops.</p>
+									<div class="features">
+
+										<!-- UGV Voyager 3 -->
+										<article>
+											<a href="https://github.com/deimencart/Voyager" target="_blank" class="image">
+												<img src="images/voyager_architecture.png" alt="Voyager 3 Architecture" />
+											</a>
+											<div class="inner">
+												<h4>UGV Voyager 3 — Autonomous All-Terrain Ackermann Rover</h4>
+												<p>Field-ready Unmanned Ground Vehicle with Ackermann kinematics (EU H2020 RAWFIE platform). Integrates The Cube Black (Pixhawk 2.1) running ArduRover, a Raspberry Pi 3B companion gateway, a 360° LightWare SF40/C LiDAR, and native ROS 2 Humble integration for laser mapping.</p>
+												<div style="margin-bottom: 0.8em;">
+													<span class="badge-tag">ROS 2 Humble</span>
+													<span class="badge-tag">ArduRover / Pixhawk</span>
+													<span class="badge-tag">LiDAR SF40/C</span>
+													<span class="badge-tag">Field Robotics</span>
+												</div>
+												<ul class="actions small">
+													<li><a href="https://github.com/deimencart/Voyager" target="_blank" class="button small">GitHub Repo</a></li>
+													<li><a href="https://github.com/deimencart/Voyager#system-overview" target="_blank" class="button alt small">System Overview</a></li>
+												</ul>
+											</div>
+										</article>
+
+										<!-- Reina Roja & SandCleaner Thesis Rover -->
+										<article>
+											<a href="https://github.com/deimencart/Concept_SandCleaner" target="_blank" class="image">
+												<img src="images/reina_roja.png" alt="Reina Roja Prototype" />
+											</a>
+											<div class="inner">
+												<h4>Reina Roja — Autonomous Beach Waste Collection Rover</h4>
+												<p><strong>B.S. Mechatronics Honors Thesis at UNAM.</strong> Conceptual design, parametric CAD modeling, chassis fabrication, and embedded motor control of an autonomous mobile rover engineered for granular sand navigation and coastal waste collection.</p>
+												<div style="margin-bottom: 0.8em;">
+													<span class="badge-tag">UNAM Thesis</span>
+													<span class="badge-tag">Mobile Rover</span>
+													<span class="badge-tag">Chassis Fabrication</span>
+													<span class="badge-tag">Motor Control</span>
+												</div>
+												<ul class="actions small">
+													<li><a href="https://github.com/deimencart/Concept_SandCleaner" target="_blank" class="button small">GitHub Repo</a></li>
+												</ul>
+											</div>
+										</article>
+
+										<!-- CROFI Robotics Club & Line Followers -->
+										<article>
+											<a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="image">
+												<img src="images/robot_playa.jpg" alt="CROFI Competition Robots" />
+											</a>
+											<div class="inner">
+												<h4>CROFI Robotics Portfolio — Line Followers & Competition Platforms</h4>
+												<p>Autonomous competitive robotics developed at UNAM's CROFI club. Design and embedded programming of high-speed PID line followers (Lamborghino architecture, QTR-8A sensor arrays), minisumo platforms, Bluetooth motor drivers, and electronics workshops.</p>
+												<div style="margin-bottom: 0.8em;">
+													<span class="badge-tag">CROFI UNAM</span>
+													<span class="badge-tag">PID Line Followers</span>
+													<span class="badge-tag">Embedded C++</span>
+													<span class="badge-tag">Robotics Club</span>
+												</div>
+												<ul class="actions small">
+													<li><a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="button small">GitHub Repo</a></li>
+												</ul>
+											</div>
+										</article>
+
+									</div>
+								</div>
+							</section>
+
+						<!-- Section Four: Experience -->
+							<section id="four">
 								<div class="container">
 									<h3>Experience & Industry</h3>
 									<div class="table-wrapper">
@@ -217,8 +264,8 @@
 								</div>
 							</section>
 
-						<!-- Section Four: Education -->
-							<section id="four">
+						<!-- Section Five: Education -->
+							<section id="five">
 								<div class="container">
 									<h3>Education</h3>
 									<div class="table-wrapper">
@@ -244,53 +291,6 @@
 											</tbody>
 										</table>
 									</div>
-								</div>
-							</section>
-
-						<!-- Section Five: Technical Skills -->
-							<section id="five">
-								<div class="container">
-									<h3>Technical Skills</h3>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Domain</th>
-													<th>Technologies, Frameworks & Tools</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td><strong>Robotics & Simulation</strong></td>
-													<td>Genesis World (XPBD/PBD GPU Physics), ROS / ROS 2 (Humble), Gazebo, PyBullet, ArduRover / Pixhawk, MAVLink, Kinematics & IK</td>
-												</tr>
-												<tr>
-													<td><strong>AI, Learning & Vision</strong></td>
-													<td>PyTorch (CUDA acceleration), Gymnasium, Soft Actor-Critic (SAC), OpenCV, SuperPoint, SuperGlue, Structure from Motion (SfM), SLAM</td>
-												</tr>
-												<tr>
-													<td><strong>Languages & Tools</strong></td>
-													<td>Python (Vectorized/NumPy), C++ (14/17), MATLAB, SQL, Linux Shell / Bash, Git & GitHub, LaTeX</td>
-												</tr>
-												<tr>
-													<td><strong>Hardware & Mechatronics</strong></td>
-													<td>The Cube Black (Pixhawk 2.1), Raspberry Pi, Arduino, STM32, LightWare SF40/C LiDAR, Autodesk Fusion 360, Eagle PCB, Oscilloscopes</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</section>
-
-						<!-- Section Six: Curriculum Vitae -->
-							<section id="six">
-								<div class="container">
-									<h3>Curriculum Vitae</h3>
-									<p>The complete curriculum vitae document includes coursework specifics, sourcing metrics, competition achievements, and academic credentials.</p>
-									<ul class="actions">
-										<li><a href="assets/cv/curriculum_vitae.pdf" target="_blank" class="button primary large">View Full CV (PDF)</a></li>
-										<li><a href="assets/cv/curriculum_vitae.pdf" download="Curriculum_Vitae_Robotics.pdf" class="button alt large">Download PDF File</a></li>
-									</ul>
 								</div>
 							</section>
 

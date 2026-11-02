@@ -3499,3 +3499,57 @@ table tbody tr:hover {
 	margin-right: 0.3em;
 	margin-bottom: 0.3em;
 }
+
+
+/* ==========================================================================
+   Typography & Layout strictly matching Edurne Bernal's site
+   ========================================================================== */
+
+body, input, select, textarea, button, #header, #wrapper {
+	font-family: "Lato", Helvetica, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
+	font-family: "Lato", Helvetica, sans-serif !important;
+	font-weight: 700 !important;
+}
+
+#one .image.main {
+	max-height: 140px !important;
+	overflow: hidden !important;
+	margin-bottom: 2em !important;
+}
+
+#one .image.main img {
+	height: 140px !important;
+	object-fit: cover !important;
+	width: 100% !important;
+}
+
+.badge-active {
+	display: inline-block;
+	padding: 0.3em 0.85em;
+	background: #132a1f;
+	color: #74c69d;
+	border: 1.5px solid #52b788;
+	border-radius: 4px;
+	font-size: 0.78em;
+	font-family: "Source Code Pro", monospace;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin-bottom: 0.6em;
+	box-shadow: 0 0 10px rgba(82, 183, 136, 0.2);
+}
+
+.badge-active i {
+	color: #52b788;
+	margin-right: 0.4em;
+	animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+	0% { opacity: 0.4; }
+	50% { opacity: 1; }
+	100% { opacity: 0.4; }
+}
