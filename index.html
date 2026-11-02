@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics & AI Engineer | Portfolio</title>
+  <meta name="description" content="Portfolio of research and engineering projects in robotic manipulation, GPU physics simulation (Genesis World), computer vision, and autonomous field robotics (ROS 2).">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .grid-bg {
+      background-image: radial-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .glass {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-hover:hover {
+      background: rgba(30, 41, 59, 0.85);
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-2px);
+      transition: all 0.25s ease;
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-mono font-bold text-white text-sm shadow-lg shadow-indigo-500/30 group-hover:bg-indigo-500 transition">R</span>
+        <span class="font-bold text-slate-100 tracking-tight group-hover:text-indigo-400 transition">Robotics & AI Lab</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-slate-100 transition">About</a>
+        <a href="#projects" class="hover:text-slate-100 transition">Projects</a>
+        <a href="#experience" class="hover:text-slate-100 transition">Experience</a>
+        <a href="#skills" class="hover:text-slate-100 transition">Skills</a>
+        <a href="#cv" class="hover:text-slate-100 transition">Curriculum Vitae</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/deimencart" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-xs font-medium text-slate-200 transition flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="assets/cv/curriculum_vitae.pdf" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white shadow-lg shadow-indigo-600/25 transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-20 pb-16 overflow-hidden grid-bg border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Active Research · Robotic Manipulation & GPU Physics Simulation
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Robotics, Perception & <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">
+            Physics Simulation
+          </span>
+        </h1>
+
+        <p class="mt-6 text-lg text-slate-300 leading-relaxed">
+          Master's in Robotics, Graphics & Computer Vision candidate at <strong>Universidad de Zaragoza (UNIZAR)</strong>.
+          Specializing in <strong>deformable object manipulation (DOM)</strong> using GPU-accelerated Position Based Dynamics (<strong>Genesis World</strong>),
+          continuous residual reinforcement learning (<strong>SAC</strong>), epipolar geometry, and autonomous field robotics (<strong>ROS 2</strong>).
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm shadow-xl shadow-indigo-600/30 transition flex items-center gap-2">
+            <span>Explore Repositories & Experiments</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="assets/cv/curriculum_vitae.pdf" target="_blank" class="px-6 py-3 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium text-sm transition flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span>Download Curriculum Vitae (PDF)</span>
+          </a>
+          <a href="https://www.linkedin.com/in/diegomendezcarter" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white transition" title="LinkedIn Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="glass p-5 rounded-2xl border-slate-800">
+          <div class="text-3xl font-mono font-bold text-indigo-400">5+</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Autonomous & Sim Repositories</div>
+        </div>
+        <div class="glass p-5 rounded-2xl border-slate-800">
+          <div class="text-3xl font-mono font-bold text-emerald-400">XPBD / GPU</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Genesis World Physics Engine</div>
+        </div>
+        <div class="glass p-5 rounded-2xl border-slate-800">
+          <div class="text-3xl font-mono font-bold text-purple-400">ROS / ROS 2</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Navigation & Manipulation Stacks</div>
+        </div>
+        <div class="glass p-5 rounded-2xl border-slate-800">
+          <div class="text-3xl font-mono font-bold text-amber-400">2.5 Years</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Industrial Sourcing & Circuit Testing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="py-20 border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="text-xs font-mono uppercase tracking-wider text-indigo-400">Engineering & Research Background</div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Bridging Physical Prototyping with GPU Physics & Autonomous Control</h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            With a solid Mechatronics Engineering foundation from <strong>UNAM</strong> (Mexico) and industrial testing experience at <strong>Chamberlain Group</strong>,
+            my work combines hardware reality with high-performance simulation and deep learning.
+          </p>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Currently at <strong>Universidad de Zaragoza</strong>, my primary focus tackles one of the toughest frontiers in robotics:
+            <strong>manipulation of non-rigid deformable objects (fabrics and textiles)</strong>. Using the <strong>Genesis World</strong> simulator,
+            I build parallel GPU physics environments for UR10e and Franka Emika Panda arms, combining analytical nominal trajectories with learned residual reinforcement learning policies.
+          </p>
+          <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-300">
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-slate-900/60 border border-slate-800">
+              <span class="text-indigo-400">▸</span> Deformable Object Manipulation (DOM)
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-slate-900/60 border border-slate-800">
+              <span class="text-indigo-400">▸</span> Residual Reinforcement Learning (SAC)
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-slate-900/60 border border-slate-800">
+              <span class="text-indigo-400">▸</span> Active Vision & Next-Best-View (NBV)
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-slate-900/60 border border-slate-800">
+              <span class="text-indigo-400">▸</span> Structure from Motion (SfM) & SLAM
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="glass p-6 rounded-2xl border-slate-800 space-y-4">
+            <h3 class="text-sm font-semibold text-slate-200 uppercase tracking-wider font-mono">Current Affiliations</h3>
+            <div class="space-y-4 text-sm">
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="font-medium text-white">M.Eng. in Robotics, Graphics & Computer Vision</div>
+                <div class="text-slate-400 text-xs">Universidad de Zaragoza (UNIZAR), Spain</div>
+                <div class="text-indigo-400 text-xs font-mono mt-1">2025 – Present</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="font-medium text-white">Robotics Research Intern</div>
+                <div class="text-slate-400 text-xs">Genesis Physics Simulation & UR10e Manipulation Lab</div>
+                <div class="text-indigo-400 text-xs font-mono mt-1">Feb 2026 – Jun 2026</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                <div class="font-medium text-white">B.S. in Mechatronics Engineering</div>
+                <div class="text-slate-400 text-xs">National Autonomous University of Mexico (UNAM)</div>
+                <div class="text-indigo-400 text-xs font-mono mt-1">2017 – 2022 · Honors Thesis on Beach Rover</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED REPOSITORIES ==================== -->
+  <section id="projects" class="py-20 border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs font-mono uppercase tracking-wider text-indigo-400">Portfolio of Implementations</div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Robotics & Vision Repositories</h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+            Clean, reproducible implementations complete with simulation benchmarks, evaluation videos, and full hardware architectures.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0 flex gap-2">
+          <a href="https://github.com/deimencart?tab=repositories" target="_blank" class="text-xs font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+            View all on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- PROJECT 1: SAC Curriculum Cloth Folding -->
+        <div class="glass rounded-2xl overflow-hidden glass-hover flex flex-col justify-between">
+          <div>
+            <div class="relative bg-slate-950 aspect-video overflow-hidden border-b border-slate-800 flex items-center justify-center">
+              <img src="assets/images/sac_stage2.gif" alt="SAC Cloth Folding Simulation Rollout" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-500/90 text-white font-medium shadow-md">
+                Reinforcement Learning + Genesis
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">
+                  SAC-Curriculum-Repro
+                </h3>
+                <a href="https://github.com/deimencart/SAC-Curriculum-Repro" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                Continuous Soft Actor-Critic (SAC) reinforcement learning with multi-stage curriculum pacing for robotic cloth manipulation. Combines analytical $C^2$ Bézier nominal paths with learned residual Cartesian offsets to eliminate wrinkles and align dual-layer waistbands.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-indigo-300 border border-slate-700/60">Genesis World (XPBD)</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-emerald-300 border border-slate-700/60">PyTorch SAC</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-purple-300 border border-slate-700/60">Gymnasium</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">UR10e Arm</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://github.com/deimencart/SAC-Curriculum-Repro" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5">
+              <span>View SAC-Curriculum-Repro Repository</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: UGV Voyager 3 -->
+        <div class="glass rounded-2xl overflow-hidden glass-hover flex flex-col justify-between">
+          <div>
+            <div class="relative bg-slate-950 aspect-video overflow-hidden border-b border-slate-800 flex items-center justify-center">
+              <img src="assets/images/voyager_architecture.png" alt="Voyager 3 Communication Architecture" class="w-full h-full object-contain p-2 bg-slate-950">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-mono bg-amber-500/90 text-white font-medium shadow-md">
+                Field Robotics · Ackermann UGV
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">
+                  Voyager 3 UGV Platform
+                </h3>
+                <a href="https://github.com/deimencart/Voyager" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                Autonomous field rover with Ackermann kinematics (EU H2020 RAWFIE platform). Combines The Cube Black (Pixhawk 2.1) running ArduRover, a Raspberry Pi 3B companion gateway, a 360° LightWare SF40/C LiDAR, and native ROS 2 Humble integration for laser mapping.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-amber-300 border border-slate-700/60">ROS 2 Humble</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-indigo-300 border border-slate-700/60">ArduRover / Pixhawk</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-teal-300 border border-slate-700/60">LiDAR SLAM</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">MAVLink</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://github.com/deimencart/Voyager" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5">
+              <span>View Voyager Repository</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: CLASP Semantic Keypoints -->
+        <div class="glass rounded-2xl overflow-hidden glass-hover flex flex-col justify-between">
+          <div>
+            <div class="relative bg-slate-950 aspect-video overflow-hidden border-b border-slate-800 flex items-center justify-center">
+              <img src="assets/images/clasp_matched_result.png" alt="CLASP Keypoint Detection and Matching" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-mono bg-purple-500/90 text-white font-medium shadow-md">
+                Computer Vision & Grasp Planning
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">
+                  CLASP-Repro
+                </h3>
+                <a href="https://github.com/deimencart/CLASP-Repro" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                Reproduction of the CLASP semantic keypoint detection architecture for garment manipulation. Features a ResNet-50 backbone with spatial deconvolution heads predicting heatmap landmarks (waistbands, hems, crotch) to generate robust grasp poses.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-purple-300 border border-slate-700/60">ResNet-50 Heatmaps</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-indigo-300 border border-slate-700/60">Keypoint Matching</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">PyTorch</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-emerald-300 border border-slate-700/60">Grasp Planning</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://github.com/deimencart/CLASP-Repro" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5">
+              <span>View CLASP-Repro Repository</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Structure from Motion -->
+        <div class="glass rounded-2xl overflow-hidden glass-hover flex flex-col justify-between">
+          <div>
+            <div class="relative bg-slate-950 aspect-video overflow-hidden border-b border-slate-800 flex items-center justify-center">
+              <img src="assets/images/sfm_superglue_matches.png" alt="SuperGlue Epipolar Matches" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-mono bg-teal-500/90 text-white font-medium shadow-md">
+                3D Vision & Geometry
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">
+                  SFM-Seminar-Project
+                </h3>
+                <a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                Structure from Motion pipeline for historical camera localization inside modern 3D reconstructions. Implements feature matching with SuperGlue, RANSAC epipolar filtering, Essential matrix decomposition, and linear triangulation.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-teal-300 border border-slate-700/60">SuperGlue / SuperPoint</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-indigo-300 border border-slate-700/60">Epipolar RANSAC</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">Triangulation</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-emerald-300 border border-slate-700/60">OpenCV</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5">
+              <span>View SFM-Seminar-Project Repository</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: Topological SUN Active Vision (Full width on large screens) -->
+        <div class="lg:col-span-2 glass rounded-2xl overflow-hidden glass-hover flex flex-col md:flex-row justify-between">
+          <div class="md:w-5/12 bg-slate-950 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-800">
+            <img src="assets/images/sun_ridges_overlay.png" alt="Topological Active Vision Ridge Extraction" class="w-full h-full object-contain p-4 max-h-72">
+          </div>
+          <div class="md:w-7/12 p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                    Active Vision & Graph SLAM
+                  </span>
+                  <h3 class="text-xl font-bold text-white mt-2">
+                    Topological-SUN-Repro
+                  </h3>
+                </div>
+                <a href="https://github.com/deimencart/Topological-SUN-Repro" target="_blank" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                Reproduction of the active 3D object exploration and topological mapping framework (Sun et al., 2016). Integrates Next-Best-View (NBV) frontier selection, volumetric occupancy grids, and topological graph extraction from real RGB-D sensor streams.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-blue-300 border border-slate-700/60">Active Vision NBV</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-indigo-300 border border-slate-700/60">Topological Graphs</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-emerald-300 border border-slate-700/60">RGB-D Perception</span>
+                <span class="px-2 py-1 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">Frontier Exploration</span>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/60">
+              <a href="https://github.com/deimencart/Topological-SUN-Repro" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-1.5">
+                <span>View Topological-SUN-Repro Repository</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE & EDUCATION TIMELINE ==================== -->
+  <section id="experience" class="py-20 border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-xs font-mono uppercase tracking-wider text-indigo-400">Career & Academic Path</div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Experience & Education</h2>
+
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Experience Column -->
+        <div>
+          <h3 class="text-lg font-bold text-slate-200 flex items-center gap-2 mb-6 font-mono">
+            <span class="w-3 h-3 rounded-full bg-indigo-500"></span> Experience
+          </h3>
+          <div class="space-y-8 border-l-2 border-slate-800 pl-6 ml-2">
+            <!-- Experience Item 1 -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-slate-900 group-hover:scale-125 transition"></span>
+              <div class="text-xs font-mono text-indigo-400">Feb 2026 – Jun 2026 · Zaragoza, Spain</div>
+              <h4 class="text-base font-bold text-white mt-1">Robotics Research Intern</h4>
+              <div class="text-xs text-slate-400">Universidad de Zaragoza (UNIZAR)</div>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                Testing UR10e arm-cloth interaction in the <strong>Genesis World</strong> physics simulator: developing validation scripts, sensor integration, and experiments for robotic fabric manipulation research using Python, PyTorch, and Linux.
+              </p>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600 ring-4 ring-slate-900 group-hover:bg-indigo-400 transition"></span>
+              <div class="text-xs font-mono text-indigo-400">Jan 2023 – Jun 2025 · Sonora, Mexico</div>
+              <h4 class="text-base font-bold text-white mt-1">Sourcing Engineer (Electronic Components)</h4>
+              <div class="text-xs text-slate-400">Chamberlain Group</div>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                Lead engineer on continuity of supply and shortages for the electronic sourcing team. Conducted circuit gap analysis, component-level testing across motors and actuators, delivering $75K USD in productivity and resolving 30+ supply crises.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600 ring-4 ring-slate-900 group-hover:bg-indigo-400 transition"></span>
+              <div class="text-xs font-mono text-indigo-400">May 2022 – Nov 2022 · Mexico City</div>
+              <h4 class="text-base font-bold text-white mt-1">Digital Art Intern</h4>
+              <div class="text-xs text-slate-400">Secretariat of Culture — Digital Cultural Center</div>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                Contributed to the design and testing of a digital art installation for the Cervantino International Festival: chassis concept, LED interfaces, and power distribution systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div>
+          <h3 class="text-lg font-bold text-slate-200 flex items-center gap-2 mb-6 font-mono">
+            <span class="w-3 h-3 rounded-full bg-purple-500"></span> Education
+          </h3>
+          <div class="space-y-8 border-l-2 border-slate-800 pl-6 ml-2">
+            <!-- Education Item 1 -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-purple-500 ring-4 ring-slate-900 group-hover:scale-125 transition"></span>
+              <div class="text-xs font-mono text-purple-400">Sep 2025 – Present · Zaragoza, Spain</div>
+              <h4 class="text-base font-bold text-white mt-1">M. Eng. in Robotics, Graphics and Computer Vision</h4>
+              <div class="text-xs text-slate-400">Universidad de Zaragoza (UNIZAR)</div>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                Key Coursework: Autonomous Robotics (ROS 2 Nav2 plugins), Machine Learning, Computer Vision, SLAM, Deep Learning, and Computer Imaging.
+              </p>
+            </div>
+
+            <!-- Education Item 2 -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600 ring-4 ring-slate-900 group-hover:bg-purple-400 transition"></span>
+              <div class="text-xs font-mono text-purple-400">Aug 2017 – Dec 2022 · Mexico City</div>
+              <h4 class="text-base font-bold text-white mt-1">B.S. in Mechatronics Engineering</h4>
+              <div class="text-xs text-slate-400">National Autonomous University of Mexico (UNAM)</div>
+              <p class="mt-2 text-sm text-slate-300 leading-relaxed">
+                Thesis: <em>Conceptual Design of an Autonomous Beach Waste Collection System</em>. Active member of CROFI Robotics Club building competition robots (line-follower, minisumo, RoboCup soccer).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS MATRIX ==================== -->
+  <section id="skills" class="py-20 border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-xs font-mono uppercase tracking-wider text-indigo-400">Capabilities & Tooling</div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Technical Skills Matrix</h2>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Skill Card 1 -->
+        <div class="glass p-6 rounded-2xl border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 font-mono font-bold">
+            01
+          </div>
+          <h3 class="text-base font-bold text-white">Robotics & Sim</h3>
+          <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-indigo-400">▸</span> Genesis World (XPBD/PBD)</li>
+            <li class="flex items-center gap-2"><span class="text-indigo-400">▸</span> ROS / ROS 2 (Humble)</li>
+            <li class="flex items-center gap-2"><span class="text-indigo-400">▸</span> Gazebo & PyBullet</li>
+            <li class="flex items-center gap-2"><span class="text-indigo-400">▸</span> Kinematics & IK Solvers</li>
+            <li class="flex items-center gap-2"><span class="text-indigo-400">▸</span> MAVLink & ArduRover</li>
+          </ul>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="glass p-6 rounded-2xl border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4 font-mono font-bold">
+            02
+          </div>
+          <h3 class="text-base font-bold text-white">AI & Perception</h3>
+          <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-purple-400">▸</span> PyTorch (CUDA acceleration)</li>
+            <li class="flex items-center gap-2"><span class="text-purple-400">▸</span> Reinforcement Learning (SAC)</li>
+            <li class="flex items-center gap-2"><span class="text-purple-400">▸</span> OpenCV & Point Clouds</li>
+            <li class="flex items-center gap-2"><span class="text-purple-400">▸</span> SuperPoint & SuperGlue</li>
+            <li class="flex items-center gap-2"><span class="text-purple-400">▸</span> Epipolar Geometry & SfM</li>
+          </ul>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="glass p-6 rounded-2xl border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 font-mono font-bold">
+            03
+          </div>
+          <h3 class="text-base font-bold text-white">Languages</h3>
+          <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-emerald-400">▸</span> Python (Vectorized NumPy)</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400">▸</span> C++ (Modern 14/17)</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400">▸</span> MATLAB</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400">▸</span> Linux Shell / Bash</li>
+            <li class="flex items-center gap-2"><span class="text-emerald-400">▸</span> Git & GitHub Actions</li>
+          </ul>
+        </div>
+
+        <!-- Skill Card 4 -->
+        <div class="glass p-6 rounded-2xl border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4 font-mono font-bold">
+            04
+          </div>
+          <h3 class="text-base font-bold text-white">Hardware & CAD</h3>
+          <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-amber-400">▸</span> Pixhawk & The Cube Black</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400">▸</span> Raspberry Pi & Arduino</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400">▸</span> LightWare SF40/C LiDAR</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400">▸</span> Autodesk Fusion 360</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400">▸</span> Eagle PCB & Oscilloscopes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CURRICULUM VITAE DOWNLOAD BANNER ==================== -->
+  <section id="cv" class="py-20 border-b border-slate-800/60 bg-gradient-to-b from-[#0b0f19] to-slate-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass p-8 sm:p-12 rounded-3xl border border-indigo-500/20 shadow-2xl shadow-indigo-500/10 text-center relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -top-10 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-4">
+          Updated Curriculum Vitae
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Looking for Detailed Engineering & Research History?</h2>
+        <p class="mt-3 text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
+          The full CV document contains coursework details, sourcing productivity metrics, competition achievements, and academic credentials.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="assets/cv/curriculum_vitae.pdf" target="_blank" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm shadow-xl shadow-indigo-600/30 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            <span>View Full CV (PDF)</span>
+          </a>
+          <a href="assets/cv/curriculum_vitae.pdf" download="Curriculum_Vitae_Robotics.pdf" class="px-6 py-3 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium text-sm transition flex items-center gap-2">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Download Direct File</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 bg-slate-950 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p>© 2026 Robotics & AI Laboratory Portfolio. Built with HTML5 & Tailwind CSS.</p>
+        <p class="mt-1 text-slate-500">Hosted worldwide via GitHub Pages at <a href="https://deimencart.github.io" class="text-indigo-400 hover:underline">deimencart.github.io</a>.</p>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/deimencart" target="_blank" class="hover:text-slate-200 transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/diegomendezcarter" target="_blank" class="hover:text-slate-200 transition">LinkedIn</a>
+        <a href="mailto:960616@unizar.es" class="hover:text-slate-200 transition">960616@unizar.es</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
