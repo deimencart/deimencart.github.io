@@ -63,7 +63,7 @@
 							<section id="two">
 								<div class="container">
 									<h3>Paper Reproductions</h3>
-									<p>Academic reproductions, algorithmic implementations, and experimental evaluations from robotics and computer vision literature.</p>
+									<p>Overview of academic reproductions, thesis research, and coursework implementations.</p>
 									<div class="features">
 
 										<!-- SAC Curriculum Cloth Folding (Thesis / Current Work) -->
@@ -72,15 +72,9 @@
 												<img src="images/sac_stage2.gif" alt="SAC Cloth Folding Rollout" />
 											</a>
 											<div class="inner">
-												<span class="badge-active"><i class="icon solid fa-circle"></i>Active · Current Work</span>
-												<h4>Soft Actor-Critic (SAC) & Curriculum Learning for Cloth Folding</h4>
-												<p><strong>Master's Thesis Research.</strong> Continuous residual reinforcement learning in <strong>Genesis World</strong> GPU physics (XPBD). Combines analytical $C^2$ quintic-timed Bézier trajectories with learned high-frequency Cartesian offsets to eliminate wrinkles and ensure hem alignment in garment manipulation with UR10e and Franka Emika Panda arms.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">Genesis World XPBD</span>
-													<span class="badge-tag">PyTorch SAC</span>
-													<span class="badge-tag">UR10e / Franka</span>
-													<span class="badge-tag">Curriculum Learning</span>
-												</div>
+												<span class="badge-active"><i class="icon solid fa-circle"></i>Active · Master's Thesis Project</span>
+												<h4>Soft Actor-Critic & Curriculum Learning for Cloth Folding</h4>
+												<p><strong>Master's Thesis Research Project.</strong> Continuous residual reinforcement learning in Genesis World GPU physics (XPBD). Combines analytical Bézier paths with learned high-frequency Cartesian offsets to eliminate wrinkles and ensure hem alignment in garment manipulation.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/SAC-Curriculum-Repro" target="_blank" class="button small">GitHub Repo</a></li>
 													<li><a href="https://github.com/deimencart/SAC-Curriculum-Repro#video-evaluations--policy-rollouts" target="_blank" class="button alt small">Video Rollouts</a></li>
@@ -95,13 +89,7 @@
 											</a>
 											<div class="inner">
 												<h4>CLASP-Repro — Semantic Keypoint Detection & Garment Grasping</h4>
-												<p>Reproduction of the CLASP semantic keypoint detection pipeline. Features a ResNet-50 backbone with spatial deconvolution heads predicting heatmap landmarks (waistbands, hems, crotch) to infer robust SE(3) grasp poses for textile manipulation.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">ResNet-50 Heatmaps</span>
-													<span class="badge-tag">Spatial Heatmaps</span>
-													<span class="badge-tag">PyTorch</span>
-													<span class="badge-tag">Grasp Planning</span>
-												</div>
+												<p><strong>Academic Paper Reproduction.</strong> Implementation of the CLASP semantic keypoint detection pipeline using a ResNet-50 heatmap network to predict fabric landmarks (waistbands, hems, crotch) and infer robust grasp poses for textile manipulation.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/CLASP-Repro" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
@@ -115,13 +103,7 @@
 											</a>
 											<div class="inner">
 												<h4>Topological-SUN-Repro — Active Vision & Topological Scene Mapping</h4>
-												<p>Reproduction of the active 3D object exploration framework (Sun et al., 2016). Integrates Next-Best-View (NBV) frontier selection, volumetric occupancy grids, and topological graph extraction from real RGB-D observations.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">Next-Best-View</span>
-													<span class="badge-tag">Topological Graphs</span>
-													<span class="badge-tag">RGB-D Perception</span>
-													<span class="badge-tag">Frontier Exploration</span>
-												</div>
+												<p><strong>Academic Paper Reproduction.</strong> Implementation of active 3D object exploration and topological scene mapping (Sun et al., 2016). Integrates Next-Best-View (NBV) frontier selection, volumetric occupancy grids, and topological graph extraction from RGB-D observations.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/Topological-SUN-Repro" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
@@ -135,13 +117,7 @@
 											</a>
 											<div class="inner">
 												<h4>SFM-Seminar-Project — Structure from Motion & Camera Localization</h4>
-												<p>Structure from Motion pipeline for historical camera localization within modern 3D reconstructions. Implements feature matching with SuperGlue, 8-point RANSAC epipolar filtering, Essential matrix decomposition, and linear triangulation.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">SuperGlue / SuperPoint</span>
-													<span class="badge-tag">Epipolar Geometry</span>
-													<span class="badge-tag">Triangulation</span>
-													<span class="badge-tag">OpenCV</span>
-												</div>
+												<p><strong>Master's Coursework & Seminar Project.</strong> Computer Vision project at UNIZAR for historical camera localization inside modern 3D reconstructions using SuperGlue feature matching, 8-point RANSAC epipolar filtering, and linear triangulation.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
@@ -156,7 +132,7 @@
 							<section id="three">
 								<div class="container">
 									<h3>Robot Workshops</h3>
-									<p>Hardware platforms, field rovers, competition vehicles, and autonomous prototypes built across academic and research workshops.</p>
+									<p>Hardware platforms, field rovers, competition vehicles, and mobile prototypes developed across academic and extracurricular workshops.</p>
 									<div class="features">
 
 										<!-- UGV Voyager 3 -->
@@ -166,13 +142,7 @@
 											</a>
 											<div class="inner">
 												<h4>UGV Voyager 3 — Autonomous All-Terrain Ackermann Rover</h4>
-												<p>Field-ready Unmanned Ground Vehicle with Ackermann kinematics (EU H2020 RAWFIE platform). Integrates The Cube Black (Pixhawk 2.1) running ArduRover, a Raspberry Pi 3B companion gateway, a 360° LightWare SF40/C LiDAR, and native ROS 2 Humble integration for laser mapping.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">ROS 2 Humble</span>
-													<span class="badge-tag">ArduRover / Pixhawk</span>
-													<span class="badge-tag">LiDAR SF40/C</span>
-													<span class="badge-tag">Field Robotics</span>
-												</div>
+												<p><strong>Research Platform & Field Robotics Project.</strong> Autonomous Ackermann rover (EU H2020 RAWFIE platform) combining The Cube Black autopilot (Pixhawk 2.1), Raspberry Pi companion gateway, 360° LightWare SF40/C LiDAR, and native ROS 2 Humble mapping.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/Voyager" target="_blank" class="button small">GitHub Repo</a></li>
 													<li><a href="https://github.com/deimencart/Voyager#system-overview" target="_blank" class="button alt small">System Overview</a></li>
@@ -183,17 +153,11 @@
 										<!-- Reina Roja & SandCleaner Thesis Rover -->
 										<article>
 											<a href="https://github.com/deimencart/Concept_SandCleaner" target="_blank" class="image">
-												<img src="images/reina_roja.png" alt="Reina Roja Prototype" />
+												<img src="images/pink_prototype_rover.jpg" alt="Pink Prototype Beach Rover" />
 											</a>
 											<div class="inner">
-												<h4>Reina Roja — Autonomous Beach Waste Collection Rover</h4>
-												<p><strong>B.S. Mechatronics Honors Thesis at UNAM.</strong> Conceptual design, parametric CAD modeling, chassis fabrication, and embedded motor control of an autonomous mobile rover engineered for granular sand navigation and coastal waste collection.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">UNAM Thesis</span>
-													<span class="badge-tag">Mobile Rover</span>
-													<span class="badge-tag">Chassis Fabrication</span>
-													<span class="badge-tag">Motor Control</span>
-												</div>
+												<h4>Autonomous Beach Cleaner Rover (UNAM Thesis)</h4>
+												<p><strong>Undergraduate Mechatronics Honors Thesis.</strong> Conceptual design, CAD modeling, chassis fabrication, and embedded motor control of an autonomous mobile rover prototype tailored for coastal granular terrain navigation and waste collection.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/Concept_SandCleaner" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
@@ -203,17 +167,11 @@
 										<!-- CROFI Robotics Club & Line Followers -->
 										<article>
 											<a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="image">
-												<img src="images/robot_playa.jpg" alt="CROFI Competition Robots" />
+												<img src="images/reina_roja.png" alt="Reina Roja Chassis" />
 											</a>
 											<div class="inner">
-												<h4>CROFI Robotics Portfolio — Line Followers & Competition Platforms</h4>
-												<p>Autonomous competitive robotics developed at UNAM's CROFI club. Design and embedded programming of high-speed PID line followers (Lamborghino architecture, QTR-8A sensor arrays), minisumo platforms, Bluetooth motor drivers, and electronics workshops.</p>
-												<div style="margin-bottom: 0.8em;">
-													<span class="badge-tag">CROFI UNAM</span>
-													<span class="badge-tag">PID Line Followers</span>
-													<span class="badge-tag">Embedded C++</span>
-													<span class="badge-tag">Robotics Club</span>
-												</div>
+												<h4>CROFI Robotics Portfolio — Reina Roja & Competition Platforms</h4>
+												<p><strong>Extracurricular Robotics Club Projects.</strong> Autonomous competitive robotics developed at UNAM (CROFI). Design and embedded programming of the Reina Roja platform, high-speed PID line followers (Lamborghino architecture, QTR-8A arrays), minisumo vehicles, and robotics workshops.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
