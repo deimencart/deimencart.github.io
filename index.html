@@ -30,11 +30,6 @@
 						<li><a href="#five">Education</a></li>
 					</ul>
 				</nav>
-				<div class="cv-download-banner" style="padding: 1.25em 2em; margin: 0 auto; width: 100%; box-sizing: border-box;">
-					<a href="assets/cv.pdf" download="CV_Diego_Mendez.pdf" class="button primary small" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.6em; background: #2e7d32; border: 1px solid rgba(255,255,255,0.25); color: #ffffff !important; font-weight: 700; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85em; padding: 0.7em 1em; text-decoration: none;">
-						<i class="icon solid fa-file-pdf" style="font-size: 1.15em;"></i> Download CV
-					</a>
-				</div>
 				<footer>
 					<ul class="icons">
 						<li><a href="https://github.com/deimencart" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
@@ -78,7 +73,7 @@
 												<img src="images/sac_stage2.gif" alt="SAC Cloth Folding Rollout" class="hover-gif" loading="lazy" />
 											</a>
 											<div class="inner">
-												<span class="badge-active"><i class="icon solid fa-circle"></i>Active · Master's Thesis Project</span>
+												<p style="margin: 0 0 0.5em 0; font-size: 0.88em; color: #111; font-weight: 700; line-height: 1.4;"><span style="color: #d32f2f; margin-right: 0.4em; font-size: 1.1em; vertical-align: -0.05em;">&#9679;</span>[Active] &mdash; Master's Thesis Project</p>
 												<h4>Soft Actor-Critic & Curriculum Learning for Cloth Folding</h4>
 												<p><strong>Master's Thesis Research Project.</strong> Continuous residual reinforcement learning in Genesis World GPU physics (XPBD). Combines analytical Bézier paths with learned high-frequency Cartesian offsets to eliminate wrinkles and ensure hem alignment in garment manipulation.</p>
 												<ul class="actions small">
@@ -118,12 +113,13 @@
 
 										<!-- Structure from Motion -->
 										<article>
-											<a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="image">
-												<img src="images/sfm_superglue_matches.png" alt="SuperGlue Epipolar Matches" />
+											<a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="image gif-hover-container">
+												<img src="images/sfm_poster.jpg" alt="Structure from Motion Pipeline Poster" class="poster-img" />
+												<img src="images/sfm_pipeline.gif" alt="Structure from Motion 3D Reconstruction Pipeline" class="hover-gif" loading="lazy" />
 											</a>
 											<div class="inner">
-												<h4>SFM-Seminar-Project — Structure from Motion & Camera Localization</h4>
-												<p><strong>Master's Coursework & Seminar Project.</strong> Computer Vision project at UNIZAR for historical camera localization inside modern 3D reconstructions using SuperGlue feature matching, 8-point RANSAC epipolar filtering, and linear triangulation.</p>
+												<h4>SFM-Seminar-Project - Structure from Motion & Camera Localization</h4>
+												<p><strong>Master's Coursework & Seminar Project.</strong> Computer Vision project at UNIZAR for historical camera localization inside modern 3D reconstructions using SuperGlue feature matching, 8-point RANSAC epipolar filtering, linear triangulation, and dense point cloud mapping.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/SFM-Seminar-Project" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
@@ -204,17 +200,31 @@
 											</div>
 										</article>
 
-										<!-- CROFI High-Speed Line Follower -->
+										<!-- CROFI Line Follower -->
 										<article>
 											<a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="image gif-hover-container">
 												<img src="images/line_follower_poster.jpg" alt="Line Follower Poster" class="poster-img" />
 												<img src="images/line_follower_run.gif" alt="Line Follower Track Run" class="hover-gif" loading="lazy" />
 											</a>
 											<div class="inner">
-												<h4>Autonomous High-Speed Line Follower & Custom Shield</h4>
-												<p><strong>Competitive Mobile Robotics.</strong> High-speed PID line follower developed for university competitions. Features an integrated Arduino Nano motor driver shield (L293D), QTR-8A reflective sensor array, and high-frequency PWM control.</p>
+												<h4>Autonomous Line Follower & Custom Shield</h4>
+												<p><strong>Competitive Mobile Robotics.</strong> PID line follower developed for university competitions. Features an integrated Arduino Nano motor driver shield (L293D), QTR-8A reflective sensor array, and embedded motor control.</p>
 												<ul class="actions small">
 													<li><a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-" target="_blank" class="button small">GitHub Repo</a></li>
+												</ul>
+											</div>
+										</article>
+
+										<!-- Minisumo & Soccer Junior Robots (CROFI 2018) -->
+										<article>
+											<a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-/tree/main/Various_Robots" target="_blank" class="image">
+												<img src="images/crofi_minisumo.jpg" alt="Minisumo & Soccer Junior Competition Robots" />
+											</a>
+											<div class="inner">
+												<h4>Minisumo & Soccer Junior Competition Robots</h4>
+												<p><strong>Competitive Robotics Platforms.</strong> Custom mechanical and electrical builds developed for university tournaments: a standalone Minisumo robot with custom H-bridge PCB, and an early ROS-based Soccer Junior mobile prototype with ultrasonic ranging and optical encoders.</p>
+												<ul class="actions small">
+													<li><a href="https://github.com/deimencart/CROFI-Robotics-Club-of-the-Engineering-Faculty-/tree/main/Various_Robots" target="_blank" class="button small">GitHub Repo</a></li>
 												</ul>
 											</div>
 										</article>
@@ -237,9 +247,6 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td><strong>Feb 2026 – Jun 2026</strong></td>
-												<tr>
 													<td><strong>Feb 2026 - Jun 2026</strong></td>
 													<td><strong>Robotics Research Intern</strong><br>Universidad de Zaragoza (UNIZAR) - Spain</td>
 													<td>
@@ -292,14 +299,20 @@
 													<td>
 														Built competitive autonomous robots (line-followers, minisumo, RoboCup Junior soccer) and mobile beach cleaner prototypes using Arduino, Raspberry Pi, ROS, and Fusion 360.
 														<div style="margin-top: 0.7em; display: flex; gap: 0.6em; align-items: center; flex-wrap: wrap;">
-															<a href="images/line_follower_poster.jpg" target="_blank" title="Autonomous High-Speed PID Line Follower" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
-																<img src="images/crofi_line_follower_thumb.jpg" alt="High-Speed Line Follower" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+															<a href="images/line_follower_poster.jpg" target="_blank" title="Autonomous PID Line Follower" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
+																<img src="images/crofi_line_follower_thumb.jpg" alt="Line Follower" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
 															</a>
-															<a href="images/robot_run_2018_poster.jpg" target="_blank" title="2018 Competition Benchmark Mobile Prototype" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
-																<img src="images/crofi_robot_2018_thumb.jpg" alt="Competition Benchmark Prototype" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+															<a href="images/crofi_minisumo.jpg" target="_blank" title="Minisumo Autonomous Competition Robot" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
+																<img src="images/crofi_minisumo_thumb.jpg" alt="Minisumo Robot" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+															</a>
+															<a href="images/crofi_soccer_junior.jpg" target="_blank" title="Soccer Junior Autonomous Prototype (Early ROS)" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
+																<img src="images/crofi_soccer_junior_thumb.jpg" alt="Soccer Junior Prototype" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
 															</a>
 															<a href="images/reina_roja_poster.jpg" target="_blank" title="Reina Roja - 4WD All-Terrain Mobile Robotics Platform" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
 																<img src="images/crofi_reina_roja_thumb.jpg" alt="Reina Roja 4WD Prototype" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
+															</a>
+															<a href="images/robot_run_2018_poster.jpg" target="_blank" title="2018 Competition Benchmark Mobile Prototype" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
+																<img src="images/crofi_robot_2018_thumb.jpg" alt="Competition Benchmark Prototype" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
 															</a>
 															<a href="images/beach_cleaner_front_lab.jpg" target="_blank" title="Beach Cleaner Screw-Drive Prototype & Power Testing" style="display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden; border: 1px solid #c8e6c9; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-shrink: 0;">
 																<img src="images/crofi_beach_cleaner_thumb.jpg" alt="Beach Cleaner Prototype" style="display: block; width: 100%; height: 100%; object-fit: cover;" />
