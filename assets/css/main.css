@@ -3559,6 +3559,11 @@ h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
 	width: 100% !important;
 }
 
+#one .container p {
+	margin-bottom: 1.15em !important;
+	line-height: 1.65 !important;
+}
+
 .badge-active {
 	display: inline-block;
 	padding: 0.3em 0.85em;
