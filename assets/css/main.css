@@ -3797,13 +3797,15 @@ h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
 
 
 /* ==========================================================================
-   Spacious & Wide Modern Tables (Sections Four & Five)
+   Spacious, Centered & Wide Modern Tables (Sections Four & Five)
    ========================================================================== */
 
 #four .container,
 #five .container {
 	width: 58em !important;
 	max-width: calc(100% - 4.5em) !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .table-wrapper {
@@ -3812,7 +3814,8 @@ h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
 	overflow: hidden !important;
 	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
 	background: #ffffff !important;
-	margin-bottom: 2.5em !important;
+	margin: 0 auto 2.5em auto !important;
+	width: 100% !important;
 }
 
 table {
@@ -3832,10 +3835,12 @@ table thead th {
 	padding: 1.15em 1.5em !important;
 }
 
+/* Centered Period column & balanced proportions on desktop */
 table thead th:first-child,
 table tbody td:first-child {
 	width: 20% !important;
 	min-width: 140px !important;
+	text-align: center !important;
 	white-space: nowrap !important;
 }
 
@@ -3843,11 +3848,13 @@ table thead th:nth-child(2),
 table tbody td:nth-child(2) {
 	width: 30% !important;
 	min-width: 200px !important;
+	text-align: left !important;
 }
 
 table thead th:nth-child(3),
 table tbody td:nth-child(3) {
 	width: 50% !important;
+	text-align: left !important;
 }
 
 table tbody tr {
@@ -3881,18 +3888,117 @@ table td strong {
 	font-style: normal !important;
 }
 
-@media screen and (max-width: 980px) {
+/* ==========================================================================
+   Mobile Optimization: Responsive Card Transformation (<= 768px)
+   Eliminates horizontal scrolling on mobile phones and renders clean stacked cards
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
 	#four .container,
 	#five .container {
 		width: 100% !important;
-		max-width: calc(100% - 3em) !important;
+		max-width: 100% !important;
+		padding-left: 1.25em !important;
+		padding-right: 1.25em !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 
-	table thead th {
-		padding: 1em 1.1em !important;
+	.table-wrapper {
+		border: none !important;
+		box-shadow: none !important;
+		background: transparent !important;
+		overflow: visible !important;
+		margin-bottom: 1.5em !important;
 	}
 
-	table td {
-		padding: 1.1em 1.1em !important;
+	table,
+	table tbody,
+	table tbody tr,
+	table tbody td {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+
+	table thead {
+		display: none !important;
+	}
+
+	table tbody tr {
+		background: #ffffff !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		margin-bottom: 1.25em !important;
+		padding: 1.25em 1.25em !important;
+		box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+	}
+
+	table tbody tr:hover {
+		background-color: #ffffff !important;
+		border-color: #3b82f6 !important;
+		box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08) !important;
+	}
+
+	table tbody td {
+		padding: 0 !important;
+		border: none !important;
+		text-align: left !important;
+		min-width: 0 !important;
+		width: 100% !important;
+	}
+
+	/* Period date badge on mobile */
+	table tbody td:first-child {
+		margin-bottom: 0.5em !important;
+		text-align: left !important;
+	}
+
+	table tbody td:first-child strong {
+		display: inline-block !important;
+		padding: 0.25em 0.7em !important;
+		background-color: #f1f5f9 !important;
+		color: #1e40af !important;
+		border-radius: 4px !important;
+		font-size: 0.82em !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.02em !important;
+		border: 1px solid #cbd5e1 !important;
+	}
+
+	/* Role & Organization on mobile */
+	table tbody td:nth-child(2) {
+		font-size: 1.05em !important;
+		line-height: 1.4 !important;
+		margin-bottom: 0.65em !important;
+		color: #0f172a !important;
+	}
+
+	table tbody td:nth-child(2) strong {
+		font-size: 1.02em !important;
+		color: #0f172a !important;
+	}
+
+	/* Scope & Achievements / Coursework on mobile */
+	table tbody td:nth-child(3) {
+		font-size: 0.9em !important;
+		line-height: 1.6 !important;
+		color: #475569 !important;
+		padding-top: 0.65em !important;
+		border-top: 1px dashed #e2e8f0 !important;
+	}
+
+	/* Mobile thumbnail strip */
+	table tbody td:nth-child(3) div[style*="display: flex"] {
+		margin-top: 0.85em !important;
+		gap: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	table tbody td:nth-child(3) div[style*="display: flex"] a {
+		width: 72px !important;
+		height: 72px !important;
 	}
 }
