@@ -3773,6 +3773,10 @@ h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
 	text-align: left !important;
 }
 
+.current-project-card p:last-child {
+	margin-bottom: 0 !important;
+}
+
 @media screen and (max-width: 768px) {
 	.current-project-card {
 		flex-direction: column !important;
