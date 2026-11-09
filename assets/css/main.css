@@ -3794,3 +3794,105 @@ h1, h2, h3, h4, h5, h6, #header h1, #header h2 {
 		width: 100% !important;
 	}
 }
+
+
+/* ==========================================================================
+   Spacious & Wide Modern Tables (Sections Four & Five)
+   ========================================================================== */
+
+#four .container,
+#five .container {
+	width: 58em !important;
+	max-width: calc(100% - 4.5em) !important;
+}
+
+.table-wrapper {
+	border: 1px solid #cbd5e1 !important;
+	border-radius: 8px !important;
+	overflow: hidden !important;
+	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+	background: #ffffff !important;
+	margin-bottom: 2.5em !important;
+}
+
+table {
+	margin: 0 !important;
+	width: 100% !important;
+	border-collapse: collapse !important;
+}
+
+table thead th {
+	background-color: #f1f5f9 !important;
+	color: #0f172a !important;
+	font-weight: 700 !important;
+	font-size: 0.84em !important;
+	letter-spacing: 0.05em !important;
+	text-transform: uppercase !important;
+	border-bottom: 2px solid #3b82f6 !important;
+	padding: 1.15em 1.5em !important;
+}
+
+table thead th:first-child,
+table tbody td:first-child {
+	width: 20% !important;
+	min-width: 140px !important;
+	white-space: nowrap !important;
+}
+
+table thead th:nth-child(2),
+table tbody td:nth-child(2) {
+	width: 30% !important;
+	min-width: 200px !important;
+}
+
+table thead th:nth-child(3),
+table tbody td:nth-child(3) {
+	width: 50% !important;
+}
+
+table tbody tr {
+	border-bottom: 1px solid #e2e8f0 !important;
+	transition: background-color 0.15s ease !important;
+}
+
+table tbody tr:last-child {
+	border-bottom: 0 !important;
+}
+
+table tbody tr:nth-child(2n + 1) {
+	background-color: #ffffff !important;
+}
+
+table tbody tr:hover {
+	background-color: #f8fafc !important;
+}
+
+table td {
+	padding: 1.35em 1.5em !important;
+	vertical-align: top !important;
+	line-height: 1.65 !important;
+	font-size: 0.93em !important;
+	color: #334155 !important;
+}
+
+table td strong {
+	color: #0f172a !important;
+	font-weight: 700 !important;
+	font-style: normal !important;
+}
+
+@media screen and (max-width: 980px) {
+	#four .container,
+	#five .container {
+		width: 100% !important;
+		max-width: calc(100% - 3em) !important;
+	}
+
+	table thead th {
+		padding: 1em 1.1em !important;
+	}
+
+	table td {
+		padding: 1.1em 1.1em !important;
+	}
+}
